@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const data = fs
-  .readFileSync(path.join(__dirname, 'day1.txt'), 'utf-8')
+  .readFileSync(path.join(__dirname, 'data.txt'), 'utf-8')
   .split('\n')
   .map((line) => line.trim())
   .filter((line) => line.length > 0);
@@ -30,9 +30,7 @@ function day1(data) {
     const steps = parseInt(instruction.slice(1));
     if (direction === 'R') {
       start = start + steps;
-      if (start === 0) {
-        pointAt0 += 1;
-      }
+
       while (start > 99) {
         start -= 100;
         if (start === 0) {
