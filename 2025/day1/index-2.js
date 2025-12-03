@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const data = fs
-  .readFileSync(path.join(__dirname, '..', 'day1', 'data.txt'), 'utf-8')
+  .readFileSync(path.join(__dirname, 'data.txt'), 'utf-8')
   .split('\n')
   .map((line) => line.trim())
   .filter((line) => line.length > 0);

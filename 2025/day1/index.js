@@ -7,7 +7,6 @@ const data = fs
   .map((line) => line.trim())
   .filter((line) => line.length > 0);
 
-console.log(data.length);
 
 const testData = [
   'L68',
